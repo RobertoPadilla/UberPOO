@@ -8,12 +8,18 @@
 <body>
   <?php
     require "./Car.php";
+    require_once "./UberX.php";
+    require_once "./UberPool.php";
     require "./Account.php";
-
-    $car = new Car("amd123", new Account("Alfonso Herrera", "OIU123"));
-    print_r($car);
-    echo "<br><br>";
-    print_r($car->driver);
+    $uberX = new UberX("CVE123", new Account("Andres Herrera", "ASD123"), "Chevrolet", "Spark");
+    $uberX->printDataCar();
+    $uberPool = new UberPool("CVD123", new Account("Andrea Herrera", "AGD123"), "Dodge", "Attitude");
+    echo "<br>";
+    $uberPool->printDataCar();
+    // $car = new Car("amd123", new Account("Alfonso Herrera", "OIU123"));
+    // print_r($car);
+    // echo "<br><br>";
+    // print_r($car->driver);
   ?>
 </body>
 </html>

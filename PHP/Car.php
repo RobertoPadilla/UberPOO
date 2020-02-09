@@ -5,8 +5,14 @@ class Car {
   public $license;
   public $driver;
   public $passenger;
-  // this.id;
-  // this.license;
-  // this.driver;
-  // this.passenger;
+  public function __construct($license, $driver)
+  {
+    $this->license = $license;
+    $this->driver = $driver;
+  }
+  public function printDataCar(){
+    print_r($this->driver);
+    echo $this->driver->name;
+    echo $this->driver->document;
+  }
 }

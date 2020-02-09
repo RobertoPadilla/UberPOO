@@ -6,9 +6,13 @@ class Account {
   public $document;
   public $email;
   public $password;
-  public function __construct($name, $document)
+  public function __construct($name, $email, $password)
   {
     $this->name = $name;
-    $this->document = $document;  
+    $this->email = $email;
+    $this->password = $password;
+  }
+  public function printDataAccount(){
+    echo $this->name . " " . $this->email;
   }
 }
